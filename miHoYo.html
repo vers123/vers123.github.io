@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>miHoYo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/tailwindcss">
+    @layer utilites 
+    {
+        .content-auto 
+        {
+            content-visibility: auto;
+        }
+        .transition-smooth 
+        {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+</style>
+<script>
+    tailwind.config = 
+    {
+        theme: 
+        {
+            extend: 
+            {
+                colors: 
+                {
+                    primary:'#FF6B35',
+                    secondary:'#FFC107',
+                    dark:'#1A1A2E',
+                    light:'#F7F7F9',
+                },
+                fontFamily: 
+                {
+                sans: ['Inter','system-ui','sans-serif'],
+                },
+            },
+        }
+    }
+</script>
+<style>
+    body 
+    {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .header 
+    {
+        background-color: orange;
+        padding: 10px;
+    }
+    .header h1 
+    {
+        margin: 0;
+        display: inline-block;
+    }
+    .container 
+    {
+        display: flex;
+    }
+    .menu 
+    {
+        background-color: gold;    
+        width: 200px;
+        padding: 10px;
+    }
+    .menu a 
+    {
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: black;
+    }
+    .content 
+    {
+        flex: 1;
+        padding: 10px;
+    }
+    .footer 
+    {
+        background-color: orange;
+        text-align: center;
+        padding: 5px;
+    }
+    .section 
+    {
+    margin-bottom: 20px;
+    }
+    .section img 
+    {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* ========== 新增的汉堡菜单样式 ========== */
+    /* 汉堡按钮容器样式 */
+    #hamburgerContainer {
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    /* 侧边栏初始样式：宽度为0，无内边距，隐藏溢出，强制文字不换行 */
+    #sidebar {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+        white-space: nowrap; /* 强制文字在一行显示 */
+    }
+
+    /* 鼠标移入汉堡按钮容器或侧边栏时，侧边栏展开 */
+    #hamburgerContainer:hover + #sidebar,
+    #sidebar:hover {
+        width: 200px;
+        padding: 4px;
+    }
+
+    /* 菜单按钮样式优化，确保内部元素排列整齐 */
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .menu-btn i {
+        margin-right: 8px;
+    }
+</style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    
+    <!-- 头部区域 -->
+    <header class="bg-primary text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold flex items-center">
+                <i class="fa fa-gamepad mr-3">
+                </i>miHoYo 游戏导航
+            </h1>
+            <div class="hidden md:block">
+                <span class="text-sm opacity-90">
+                    探索米哈游的精彩世界
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="flex-grow flex flex-col md:flex-row">
+        <!-- 汉堡按钮容器 -->
+        <div id="hamburgerContainer" class="bg-dark text-white p-4 shadow-md">
+            <button id="menuToggle" class="text-white focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 菜单区域 -->
+        <aside id="sidebar" class="bg-dark text-white w-0 p-4 shadow-md transition-all duration-300 ease-in-out overflow-hidden">
+            <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-700">
+                导航菜单
+            </h2>
+            <!-- 导航菜单列表 -->
+            <nav class="space-y-1">
+                <button onmouseenter="showContent('home')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
+                    <i class="fa fa-home w-6"></i>首页
+                </button>
+                <button onmouseenter="showContent('mihoyo-games')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
+                    <i class="fa fa-gamepad w-6"></i>米哈游游戏
+                </button>
+                <button onmouseenter="showContent('miyoushe')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
+                    <i class="fa fa-users w-6"></i>米游社
+                </button>
+            </nav>
+        </aside>
+
+        <!-- 内容区域 -->
+        <section class="flex-grow p-6 overflow-auto">
+            <!-- 首页内容 -->
+            <div id="home" class="content-section">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                        欢迎来到米哈游游戏导航
+                    </h2>
+                    <p class="text-gray-600 mb-4">
+                        米哈游（miHoYo）是一家中国知名游戏开发与发行公司，成立于2012年，以高品质的动漫风格游戏著称。
+                    </p>
+                    <p class="text-gray-600">
+                        请使用左侧菜单浏览米哈游的游戏作品和相关平台。
+                    </p>
+                </div>
+        
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-smooth">
+                        <i class="fa fa-gamepad text-5xl text-primary mb-4">
+                        </i>
+                        <h3 class="text-xl font-semibold mb-2">
+                            精彩游戏
+                        </h3>
+                        <p class="text-gray-600">
+                            探索米哈游旗下的热门游戏作品
+                        </p>
+                        <button onclick="showContent('mihoyo-games')" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition-smooth">
+                            查看游戏
+                        </button>
+                    </div>
+          
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-smooth">
+                        <i class="fa fa-users text-5xl text-primary mb-4">
+                        </i>
+                        <h3 class="text-xl font-semibold mb-2">
+                            玩家社区
+                        </h3>
+                        <p class="text-gray-600">
+                            访问米游社，与其他玩家交流
+                        </p>
+                        <button onclick="showContent('miyoushe')" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition-smooth">
+                            进入社区
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 米哈游游戏内容 -->
+            <div id="mihoyo-games" class="content-section hidden">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                        <i class="fa fa-gamepad mr-2 text-primary">
+                        </i>米哈游游戏官网
+                    </h2>
+                    <a href="https://mihoyo.com" target="_blank" title="miHoYo官网" class="inline-block mb-8 p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-smooth">
+                        <img src="./images/miHoYo.png" alt="miHoYo 官网" class="h-16 md:h-20 lg:h-24 w-auto object-cover bg-black p-2">
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- 原神 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://ys.mihoyo.com/main" target="_blank" title="原神官网">
+                            <img src="./images/Genshin Impact.jpg" alt="原神" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    原神官网
+                                </h3>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    开放世界冒险游戏
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                        
+                    <!-- 崩坏：星穹铁道 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://sr.mihoyo.com/main" target="_blank" title="崩坏：星穹铁道官网">
+                            <img src="./images/Honkai Star Rail.jpg" alt="崩坏：星穹铁道" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    崩坏：星穹铁道官网
+                                </h3>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    回合制角色扮演游戏
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 绝区零 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://zzz.mihoyo.com/main" target="_blank" title="绝区零官网">
+                            <img src="./images/Zenless Zone Zero.jpg" alt="绝区零" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    绝区零官网
+                                </h3>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    动作角色扮演游戏
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 星布谷地 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://planet.mihoyo.com/home" target="_blank" title="星布谷地官网">
+                            <img src="./images/Petit Planet.jpg" alt="星布谷地" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    星布谷地官网
+                                </h3>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    休闲模拟游戏
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 崩坏：因缘精灵 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://yyjl.mihoyo.com/" target="_blank" title="崩坏：因缘精灵官网">
+                            <img src="./images/Honkai Nexus Anima.jpg" alt="崩坏：因缘精灵" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    崩坏：因缘精灵官网
+                                </h3>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    崩坏系列新作
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 崩坏3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://bh3.mihoyo.com/main" target="_blank" title="崩坏3官网">
+                            <img src="./images/Honkai Impact 3.jpg" alt="崩坏3" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    崩坏3官网
+                                </h3>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    动作角色扮演游戏
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                        
+                    <!-- 未定事件簿 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://wd.mihoyo.com/main" target="_blank" title="未定事件簿官网">
+                            <img src="./images/Tears of Themis.jpg" alt="未定事件簿" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    未定事件簿官网
+                                </h3>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    恋爱推理游戏
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 崩坏学园2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://www.benghuai.com/index/" target="_blank" title="崩坏学园2官网">
+                            <img src="./images/bh2-logo-v2.jpg" alt="崩坏学园2" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    崩坏学园2官网
+                                </h3>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    弹幕射击游戏
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 米游社内容 -->
+            <div id="miyoushe" class="content-section hidden">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                        <i class="fa fa-users mr-2 text-primary">
+                        </i>米游社相关平台
+                    </h2>
+                    <p class="text-gray-600 mb-4">
+                        米游社是米哈游官方游戏社区平台，玩家可以在这里获取游戏资讯、交流经验和参与活动。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 米游社官网 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://www.miyoushe.com/" target="_blank" title="米游社官网">
+                            <img src="./images/mys-logo-v2.png" alt="米游社" class="h-24 md:h-32 lg:h-40 w-auto object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-semibold text-gray-800">
+                                    米游社官网
+                                </h3>
+                                <p class="text-gray-600 mt-2">
+                                    米哈游官方游戏社区，汇聚各类游戏玩家
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                        
+                    <!-- 米游社-大别墅 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
+                        <a href="https://www.miyoushe.com/dby" target="_blank" title="米游社-大别墅官网">
+                            <img src="./images/dby-logo-v2.jpg" alt="米游社-大别墅" class="h-24 md:h-32 lg:h-40 w-auto object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-semibold text-gray-800">
+                                    米游社-大别墅官网
+                                </h3>
+                                <p class="text-gray-600 mt-2">
+                                    米游社旗下的创作者平台，分享游戏创作内容
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚区域 -->
+    <footer class="bg-dark text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 米哈游游戏导航 | 本网站仅作展示用途
+            </p>
+            <p class="text-sm mt-2 opacity-70">
+                所有商标和版权均属于各自所有者
+            </p>
+        </div>
+    </footer>
+
+    <script>
+    // 显示选中的内容区域，隐藏其他区域
+    function showContent(id) {
+        // 隐藏所有内容区域
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.add('hidden');
+        });
+
+        // 显示选中的内容区域
+        document.getElementById(id).classList.remove('hidden');
+
+        // 高亮当前选中的菜单
+        document.querySelectorAll('.menu-btn').forEach(btn => {
+            btn.classList.remove('bg-primary');
+        });
+        // 这里通过获取所有菜单按钮，然后根据内容区域的 ID 来匹配对应的菜单按钮并高亮
+        const buttons = document.querySelectorAll('.menu-btn');
+        buttons.forEach(btn => {
+            const contentId = btn.getAttribute('onmouseenter').match(/'([^']+)'/)[1];
+            if (contentId === id) {
+                btn.classList.add('bg-primary');
+            }
+        });
+    }
+
+    // 初始显示首页
+    document.addEventListener('DOMContentLoaded', () => {
+        showContent('home');
+        // 默认高亮首页菜单
+        const homeBtn = document.querySelector('.menu-btn[onmouseenter="showContent(\'home\')"]');
+        homeBtn.classList.add('bg-primary');
+    });
+    </script>
+
+</body>
+</html>
