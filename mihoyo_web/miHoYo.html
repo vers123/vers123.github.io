@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 <head>
 <meta charset="utf-8">
 <title>miHoYo</title>
@@ -137,11 +137,11 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-2xl md:text-3xl font-bold flex items-center">
                 <i class="fa fa-gamepad mr-3">
-                </i>miHoYo 游戏导航
+                </i>miHoYo 网站导航
             </h1>
             <div class="hidden md:block">
                 <span class="text-sm opacity-90">
-                    探索米哈游的精彩世界
+                    探索精彩世界!
                 </span>
             </div>
         </div>
@@ -165,11 +165,11 @@
                 <button onmouseenter="showContent('home')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
                     <i class="fa fa-home w-6"></i>首页
                 </button>
-                <button onmouseenter="showContent('mihoyo-games')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
-                    <i class="fa fa-gamepad w-6"></i>米哈游游戏
-                </button>
                 <button onmouseenter="showContent('miyoushe')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
                     <i class="fa fa-users w-6"></i>米游社
+                </button>
+                <button onmouseenter="showContent('mihoyo-games')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
+                    <i class="fa fa-gamepad w-6"></i>米哈游游戏
                 </button>
             </nav>
         </aside>
@@ -191,20 +191,7 @@
                 </div>
         
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-smooth">
-                        <i class="fa fa-gamepad text-5xl text-primary mb-4">
-                        </i>
-                        <h3 class="text-xl font-semibold mb-2">
-                            精彩游戏
-                        </h3>
-                        <p class="text-gray-600">
-                            探索米哈游旗下的热门游戏作品
-                        </p>
-                        <button onclick="showContent('mihoyo-games')" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition-smooth">
-                            查看游戏
-                        </button>
-                    </div>
-          
+
                     <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-smooth">
                         <i class="fa fa-users text-5xl text-primary mb-4">
                         </i>
@@ -218,6 +205,21 @@
                             进入社区
                         </button>
                     </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-smooth">
+                        <i class="fa fa-gamepad text-5xl text-primary mb-4">
+                        </i>
+                        <h3 class="text-xl font-semibold mb-2">
+                            精彩游戏
+                        </h3>
+                        <p class="text-gray-600">
+                            探索米哈游旗下的热门游戏作品
+                        </p>
+                        <button onclick="showContent('mihoyo-games')" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition-smooth">
+                            查看游戏
+                        </button>
+                    </div>
+
                 </div>
             </div>
 
@@ -229,7 +231,7 @@
                         </i>米哈游游戏官网
                     </h2>
                     <a href="https://mihoyo.com" target="_blank" title="miHoYo官网" class="inline-block mb-8 p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-smooth">
-                        <img src="./images/miHoYo.png" alt="miHoYo 官网" class="h-16 md:h-20 lg:h-24 w-auto object-cover bg-black p-2">
+                        <img src="mihoyo/images/logo/mihoyo.png" alt="miHoYo 官网" class="h-16 md:h-20 lg:h-24 w-auto object-cover bg-black p-2">
                     </a>
                 </div>
 
@@ -237,7 +239,7 @@
                     <!-- 原神 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://ys.mihoyo.com/main" target="_blank" title="原神官网">
-                            <img src="./images/Genshin Impact.jpg" alt="原神" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <img src="mihoyo/images/game_logo/genshin_impact.jpg" alt="原神" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     原神官网
@@ -252,7 +254,7 @@
                     <!-- 崩坏：星穹铁道 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://sr.mihoyo.com/main" target="_blank" title="崩坏：星穹铁道官网">
-                            <img src="./images/Honkai Star Rail.jpg" alt="崩坏：星穹铁道" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <img src="mihoyo/images/game_logo/honkai_nexus_anima.jpg" alt="崩坏：星穹铁道" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     崩坏：星穹铁道官网
@@ -267,7 +269,7 @@
                     <!-- 绝区零 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://zzz.mihoyo.com/main" target="_blank" title="绝区零官网">
-                            <img src="./images/Zenless Zone Zero.jpg" alt="绝区零" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <img src="mihoyo/images/game_logo/zenless_zone_zero.jpg" alt="绝区零" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     绝区零官网
@@ -282,7 +284,7 @@
                     <!-- 星布谷地 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://planet.mihoyo.com/home" target="_blank" title="星布谷地官网">
-                            <img src="./images/Petit Planet.jpg" alt="星布谷地" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <img src="mihoyo/images/game_logo/petit_planet.jpg" alt="星布谷地" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     星布谷地官网
@@ -297,7 +299,7 @@
                     <!-- 崩坏：因缘精灵 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://yyjl.mihoyo.com/" target="_blank" title="崩坏：因缘精灵官网">
-                            <img src="./images/Honkai Nexus Anima.jpg" alt="崩坏：因缘精灵" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <img src="mihoyo/images/game_logo/honkai_nexus_anima.jpg" alt="崩坏：因缘精灵" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     崩坏：因缘精灵官网
@@ -312,7 +314,7 @@
                     <!-- 崩坏3 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://bh3.mihoyo.com/main" target="_blank" title="崩坏3官网">
-                            <img src="./images/Honkai Impact 3.jpg" alt="崩坏3" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <img src="mihoyo/images/game_logo/honkai_impact_3.jpg" alt="崩坏3" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     崩坏3官网
@@ -327,7 +329,7 @@
                     <!-- 未定事件簿 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://wd.mihoyo.com/main" target="_blank" title="未定事件簿官网">
-                            <img src="./images/Tears of Themis.jpg" alt="未定事件簿" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <img src="mihoyo/images/game_logo/tears_of_themis.jpg" alt="未定事件簿" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     未定事件簿官网
@@ -342,7 +344,7 @@
                     <!-- 崩坏学园2 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://www.benghuai.com/index/" target="_blank" title="崩坏学园2官网">
-                            <img src="./images/bh2-logo-v2.jpg" alt="崩坏学园2" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                            <img src="mihoyo/images/game_logo/bh2-logo-v2.jpg" alt="崩坏学园2" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     崩坏学园2官网
@@ -372,7 +374,7 @@
                 <!-- 米游社官网 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://www.miyoushe.com/" target="_blank" title="米游社官网">
-                            <img src="./images/mys-logo-v2.png" alt="米游社" class="h-24 md:h-32 lg:h-40 w-auto object-cover">
+                            <img src="mihoyo/images/logo/mys-logo-v2.png" alt="米游社" class="h-24 md:h-32 lg:h-40 w-auto object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-semibold text-gray-800">
                                     米游社官网
@@ -387,7 +389,7 @@
                     <!-- 米游社-大别墅 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://www.miyoushe.com/dby" target="_blank" title="米游社-大别墅官网">
-                            <img src="./images/dby-logo-v2.jpg" alt="米游社-大别墅" class="h-24 md:h-32 lg:h-40 w-auto object-cover">
+                            <img src="mihoyo/images/logo/dby-logo-v2.jpg" alt="米游社-大别墅" class="h-24 md:h-32 lg:h-40 w-auto object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-semibold text-gray-800">
                                     米游社-大别墅官网
