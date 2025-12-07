@@ -37,10 +37,15 @@
 <body class="bg-gray-100 min-h-screen flex flex-col">
     <!-- 头部区域 -->
     <header class="bg-primary text-white shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-4 flex items-center relative">
             <h1 class="text-2xl md:text-3xl font-bold flex items-center">
-                <i class="fa fa-gamepad mr-3"></i>米哈游游戏导航
+                <i class="fa fa-home mr-3"></i>Vers123网站 导航
             </h1>
+            <div class="hidden md:block absolute right-4">
+                <span class="text-sm opacity-90">
+                    探索精彩世界!
+                </span>
+            </div>
         </div>
     </header>
 
@@ -51,26 +56,21 @@
                 请选择要访问的页面
             </h2>
             <div class="grid grid-cols-1 gap-4">
-                <!-- 跳转至 bing.com -->
-                <a href="https://www.bing.com" target="_blank" class="block">
-                    <button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-smooth flex items-center justify-center">
-                        <i class="fa fa-search mr-2"></i>访问 Bing 搜索
-                    </button>
-                </a>
 
                 <!-- 跳转到 mihoyo.html -->
-                <a href="mihoyo_web/miHoYo.html" class="block">
+                <a href="Web/mihoyo_web/miHoYo.html" class="block">
                     <button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-smooth flex items-center justify-center">
-                        <i class="fa fa-gamepad mr-2"></i>访问米哈游导航页
+                        <i class="fa fa-gamepad mr-2"></i>访问 miHoYo 导航页
                     </button>
                 </a>
 
                 <!-- 跳转到 another_games.html -->
-                <a href="games/another_game_web/another_games.html" class="block">
+                <a href="Web/another_game_web/another_games.html" class="block">
                     <button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-smooth flex items-center justify-center">
-                        <i class="fa fa-gamepad mr-2"></i>访问Another Game导航页
+                        <i class="fa fa-gamepad mr-2"></i>访问 Another Game 导航页
                     </button>
                 </a>
+
             </div>
         </div>
     </main>
@@ -78,7 +78,7 @@
     <!-- 页脚区域 -->
     <footer class="bg-dark text-white py-6">
         <div class="container mx-auto px-4 text-center">
-            <p>© 2025 米哈游游戏导航 | 本网站仅作展示用途</p>
+            <p>© 2025 游戏导航 | 本网站仅作展示用途</p>
             <p class="text-sm mt-2 opacity-70">
                 所有商标和版权均属于各自所有者
             </p>

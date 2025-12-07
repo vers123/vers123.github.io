@@ -6,33 +6,33 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/tailwindcss">
-    @layer utilites 
+    @layer utilities
     {
-        .content-auto 
+        .content-auto
         {
             content-visibility: auto;
         }
-        .transition-smooth 
+        .transition-smooth
         {
             transition: all 0.3s ease-in-out;
         }
     }
 </style>
 <script>
-    tailwind.config = 
+    tailwind.config =
     {
-        theme: 
+        theme:
         {
-            extend: 
+            extend:
             {
-                colors: 
+                colors:
                 {
                     primary:'#FF6B35',
                     secondary:'#FFC107',
                     dark:'#1A1A2E',
                     light:'#F7F7F9',
                 },
-                fontFamily: 
+                fontFamily:
                 {
                 sans: ['Inter','system-ui','sans-serif'],
                 },
@@ -41,55 +41,55 @@
     }
 </script>
 <style>
-    body 
+    body
     {
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
     }
-    .header 
+    .header
     {
         background-color: orange;
         padding: 10px;
     }
-    .header h1 
+    .header h1
     {
         margin: 0;
         display: inline-block;
     }
-    .container 
+    .container
     {
         display: flex;
     }
-    .menu 
+    .menu
     {
-        background-color: gold;    
+        background-color: gold;
         width: 200px;
         padding: 10px;
     }
-    .menu a 
+    .menu a
     {
         display: block;
         margin-bottom: 10px;
         text-decoration: none;
         color: black;
     }
-    .content 
+    .content
     {
         flex: 1;
         padding: 10px;
     }
-    .footer 
+    .footer
     {
         background-color: orange;
         text-align: center;
         padding: 5px;
     }
-    .section 
+    .section
     {
     margin-bottom: 20px;
     }
-    .section img 
+    .section img
     {
         max-width: 100%;
         height: auto;
@@ -128,18 +128,25 @@
     .menu-btn i {
         margin-right: 8px;
     }
+
+    .home-back-btn{
+        margin-top: atuo;
+        border-top: 1px solid #333;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
 </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col">
-    
+
     <!-- 头部区域 -->
     <header class="bg-primary text-white shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-4 flex items-center">
             <h1 class="text-2xl md:text-3xl font-bold flex items-center">
                 <i class="fa fa-gamepad mr-3">
                 </i>miHoYo 网站导航
             </h1>
-            <div class="hidden md:block">
+            <div class="hidden md:block absolute right-4">
                 <span class="text-sm opacity-90">
                     探索精彩世界!
                 </span>
@@ -154,6 +161,9 @@
             <button id="menuToggle" class="text-white focus:outline-none">
                 <i class="fa fa-bars text-xl"></i>
             </button>
+            <a href="../../index.html" class="flex items-center text-white hover:opacity-90 transition-smooth">
+                <i class="fa fa-reply" aria-hidden="true"></i>主页
+            </a>
         </div>
         <!-- 菜单区域 -->
         <aside id="sidebar" class="bg-dark text-white w-0 p-4 shadow-md transition-all duration-300 ease-in-out overflow-hidden">
@@ -189,7 +199,7 @@
                         请使用左侧菜单浏览米哈游的游戏作品和相关平台。
                     </p>
                 </div>
-        
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-smooth">
@@ -250,7 +260,7 @@
                             </div>
                         </a>
                     </div>
-                        
+
                     <!-- 崩坏：星穹铁道 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://sr.mihoyo.com/main" target="_blank" title="崩坏：星穹铁道官网">
@@ -325,7 +335,7 @@
                             </div>
                         </a>
                     </div>
-                        
+
                     <!-- 未定事件簿 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://wd.mihoyo.com/main" target="_blank" title="未定事件簿官网">
@@ -385,7 +395,7 @@
                             </div>
                         </a>
                     </div>
-                        
+
                     <!-- 米游社-大别墅 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
                         <a href="https://www.miyoushe.com/dby" target="_blank" title="米游社-大别墅官网">
