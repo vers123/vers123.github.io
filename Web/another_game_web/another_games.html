@@ -2,11 +2,15 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8">
-<title>Another Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Another Game 游戏导航 - 探索更多精彩游戏世界">
+<meta name="keywords" content="游戏导航,游戏官网,热门游戏">
+<meta name="author" content="Vers123">
+<title>Another Game 游戏导航</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/tailwindcss">
-    @layer utilites 
+    @layer utilities 
     {
         .content-auto 
         {
@@ -47,78 +51,26 @@
         padding: 0;
         font-family: Arial, sans-serif;
     }
-    .header 
-    {
-        background-color: orange;
-        padding: 10px;
-    }
-    .header h1 
-    {
-        margin: 0;
-        display: inline-block;
-    }
-    .container 
-    {
-        display: flex;
-    }
-    .menu 
-    {
-        background-color: gold;    
-        width: 200px;
-        padding: 10px;
-    }
-    .menu a 
-    {
-        display: block;
-        margin-bottom: 10px;
-        text-decoration: none;
-        color: black;
-    }
-    .content 
-    {
-        flex: 1;
-        padding: 10px;
-    }
-    .footer 
-    {
-        background-color: orange;
-        text-align: center;
-        padding: 5px;
-    }
-    .section 
-    {
-    margin-bottom: 20px;
-    }
-    .section img 
-    {
-        max-width: 100%;
-        height: auto;
-    }
 
-    /* ========== 新增的汉堡菜单样式 ========== */
-    /* 汉堡按钮容器样式 */
     #hamburgerContainer {
         cursor: pointer;
         z-index: 10;
     }
 
-    /* 侧边栏初始样式：宽度为0，无内边距，隐藏溢出，强制文字不换行 */
     #sidebar {
         width: 0;
         padding: 0;
         overflow: hidden;
         transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
-        white-space: nowrap; /* 强制文字在一行显示 */
+        white-space: nowrap;
     }
 
-    /* 鼠标移入汉堡按钮容器或侧边栏时，侧边栏展开 */
     #hamburgerContainer:hover + #sidebar,
     #sidebar:hover {
         width: 200px;
         padding: 4px;
     }
 
-    /* 菜单按钮样式优化，确保内部元素排列整齐 */
     .menu-btn {
         display: flex;
         align-items: center;
@@ -165,10 +117,10 @@
             </h2>
             <!-- 导航菜单列表 -->
             <nav class="space-y-1">
-                <button onmouseenter="showContent('home')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
+                <button onclick="showContent('home')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
                     <i class="fa fa-home w-6"></i>首页
                 </button>
-                <button onmouseenter="showContent('another_games-games')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
+                <button onclick="showContent('another_games-games')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
                     <i class="fa fa-gamepad w-6"></i>Another Game
                 </button>
             </nav>
@@ -190,21 +142,7 @@
                     </p>
                 </div>
         
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                    <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-smooth">
-                        <i class="fa fa-users text-5xl text-primary mb-4">
-                        </i>
-                        <h3 class="text-xl font-semibold mb-2">
-                            玩家社区
-                        </h3>
-                        <p class="text-gray-600">
-                            访问社区，与其他玩家交流
-                        </p>
-                        <button onclick="showContent('miyoushe')" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition-smooth">
-                            进入社区
-                        </button>
-                    </div>
+                <div class="grid grid-cols-1 gap-6">
 
                     <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-smooth">
                         <i class="fa fa-gamepad text-5xl text-primary mb-4">
@@ -259,7 +197,7 @@
     <!-- 页脚区域 -->
     <footer class="bg-dark text-white py-6">
         <div class="container mx-auto px-4 text-center">
-            <p>© 2025 米哈游游戏导航 | 本网站仅作展示用途
+            <p>© 2025 Another Game 游戏导航 | 本网站仅作展示用途
             </p>
             <p class="text-sm mt-2 opacity-70">
                 所有商标和版权均属于各自所有者
@@ -268,35 +206,28 @@
     </footer>
 
     <script>
-    // 显示选中的内容区域，隐藏其他区域
     function showContent(id) {
-        // 隐藏所有内容区域
         document.querySelectorAll('.content-section').forEach(section => {
             section.classList.add('hidden');
         });
 
-        // 显示选中的内容区域
         document.getElementById(id).classList.remove('hidden');
 
-        // 高亮当前选中的菜单
         document.querySelectorAll('.menu-btn').forEach(btn => {
             btn.classList.remove('bg-primary');
         });
-        // 这里通过获取所有菜单按钮，然后根据内容区域的 ID 来匹配对应的菜单按钮并高亮
         const buttons = document.querySelectorAll('.menu-btn');
         buttons.forEach(btn => {
-            const contentId = btn.getAttribute('onmouseenter').match(/'([^']+)'/)[1];
+            const contentId = btn.getAttribute('onclick').match(/'([^']+)'/)[1];
             if (contentId === id) {
                 btn.classList.add('bg-primary');
             }
         });
     }
 
-    // 初始显示首页
     document.addEventListener('DOMContentLoaded', () => {
         showContent('home');
-        // 默认高亮首页菜单
-        const homeBtn = document.querySelector('.menu-btn[onmouseenter="showContent(\'home\')"]');
+        const homeBtn = document.querySelector('.menu-btn[onclick="showContent(\'home\')"]');
         homeBtn.classList.add('bg-primary');
     });
     </script>
