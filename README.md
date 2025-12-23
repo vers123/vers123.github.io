@@ -38,8 +38,7 @@ vers123.github.io/
 ├── README.md                       # Project documentation
 ├── Web/
 │   ├── mihoyo_web/
-│   │   ├── miHoYo.html            # miHoYo game navigation page
-│   │   ├── miHoYo_EN.html         # English version of miHoYo game navigation page
+│   │   ├── miHoYo.html            # miHoYo game navigation page (bilingual)
 │   │   └── images/                # miHoYo game images
 │   │       ├── Genshin Impact.jpg
 │   │       ├── Honkai Impact 3rd.jpg
@@ -48,8 +47,7 @@ vers123.github.io/
 │   │       ├── Tears of Themis.jpg
 │   │       └── miHoYo logo.png
 │   └── another_game_web/
-│       ├── another_games.html     # Other games navigation page
-│       ├── another_games_EN.html  # English version of other games navigation page
+│       ├── another_games.html     # Other games navigation page (bilingual)
 │       └── images/                # Other game images
 │           ├── Minecraft.jpg
 │           └── Microsoft.jpg
@@ -141,18 +139,17 @@ The website has been optimized for search engines:
 
 ## 常见问题 / FAQ
 
-**Q: Can I use this website for commercial purposes?**
-A: This project is for learning and communication purposes only. Please respect the copyright of game developers.
-
-**Q: How do I add new games?**
-A: Refer to the "Development Guide" section above.
-
-**Q: Is this website mobile-friendly?**
-A: Yes, the website has been optimized for various devices.
-
 ---
 
 ## 更新日志 / Changelog
+
+### V2.3 (2025-12-23)
+- Added user favorites feature with local storage persistence
+- Added search functionality for game name filtering
+- Added dark mode theme with toggle button
+- Optimized mobile experience with responsive design
+- Integrated bilingual support into single files (removed _CN and _EN suffixes)
+- Added language switching functionality to toggle between Chinese/English content
 
 ### V2.2 (2025-12-23)
 - Integrated README_EN.md and README_CN.md into README.md
@@ -179,13 +176,10 @@ A: Yes, the website has been optimized for various devices.
 
 ## 未来计划 / Future Plans
 
-- [ ] Add more popular games
-- [ ] Add game news display
-- [ ] Add user favorites feature
-- [ ] Add search functionality
-- [ ] Add dark mode theme
-- [ ] Optimize mobile experience
-- [ ] Add more language options
+- [ ] Add more game categories
+- [ ] Implement advanced search filters
+- [ ] Add game recommendation system
+- [ ] Enhance user experience with more animations
 
 ---
 
@@ -233,8 +227,7 @@ vers123.github.io/
 ├── README.md                       # 项目文档
 ├── Web/
 │   ├── mihoyo_web/
-│   │   ├── miHoYo.html            # 米哈游游戏导航页面
-│   │   ├── miHoYo_EN.html         # 米哈游游戏导航页面英文版
+│   │   ├── miHoYo.html            # 米哈游游戏导航页面（双语）
 │   │   └── images/                # 米哈游游戏图片
 │   │       ├── Genshin Impact.jpg
 │   │       ├── Honkai Impact 3rd.jpg
@@ -243,8 +236,7 @@ vers123.github.io/
 │   │       ├── Tears of Themis.jpg
 │   │       └── miHoYo logo.png
 │   └── another_game_web/
-│       ├── another_games.html     # 其他游戏导航页面
-│       ├── another_games_EN.html  # 其他游戏导航页面英文版
+│       ├── another_games.html     # 其他游戏导航页面（双语）
 │       └── images/                # 其他游戏图片
 │           ├── Minecraft.jpg
 │           └── Microsoft.jpg
@@ -349,6 +341,14 @@ A：是的，网站已针对各种设备进行了优化。
 
 ## 更新日志
 
+### V2.3 (2025-12-23)
+- 添加了用户收藏功能，支持本地存储持久化
+- 添加了搜索功能，支持游戏名称过滤
+- 添加了暗黑模式主题，带有切换按钮
+- 优化了移动端体验，实现了响应式设计
+- 将双语支持整合到单个文件中（移除了_CN和_EN后缀）
+- 添加了语言切换功能，可在中文/英文内容之间切换
+
 ### V2.2 (2025-12-23)
 - 整合README_EN.md和README_CN.md到README.md
 - 删除了冗余的语言特定README文件
@@ -373,14 +373,6 @@ A：是的，网站已针对各种设备进行了优化。
 ---
 
 ## 未来计划
-
-- [ ] 添加更多热门游戏
-- [ ] 添加游戏新闻展示
-- [ ] 添加用户收藏功能
-- [ ] 添加搜索功能
-- [ ] 添加暗黑模式主题
-- [ ] 优化移动端体验
-- [ ] 添加更多语言选项
 
 ---
 
