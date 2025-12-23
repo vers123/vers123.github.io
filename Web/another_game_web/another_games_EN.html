@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Another Game 游戏导航 - 探索更多精彩游戏世界">
-<meta name="keywords" content="游戏导航,游戏官网,热门游戏">
+<meta name="description" content="Another Game Navigation - Explore more amazing game worlds">
+<meta name="keywords" content="game navigation,game official website,popular games">
 <meta name="author" content="Vers123">
-<title>Another Game 游戏导航</title>
+<title>Another Game Navigation</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/tailwindcss">
@@ -84,41 +84,41 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col">
     
-    <!-- 头部区域 -->
+    <!-- Header Area -->
     <header class="bg-primary text-white shadow-lg">
         <div class="container mx-auto px-4 py-4 flex items-center">
             <h1 class="text-2xl md:text-3xl font-bold flex items-center">
                 <i class="fa fa-gamepad mr-3">
-                </i>Another Game 网站导航
+                </i>Another Game Website Navigation
             </h1>
             <div class="hidden md:block absolute right-4">
                 <span class="text-sm opacity-90">
-                    探索精彩世界!
+                    Explore the Amazing World!
                 </span>
             </div>
         </div>
     </header>
 
-    <!-- 主要内容区域 -->
+    <!-- Main Content Area -->
     <main class="flex-grow flex flex-col md:flex-row">
-        <!-- 汉堡按钮容器 -->
+        <!-- Hamburger Button Container -->
         <div id="hamburgerContainer" class="bg-dark text-white p-4 shadow-md">
             <button id="menuToggle" class="text-white focus:outline-none">
                 <i class="fa fa-bars text-xl"></i>
             </button>
             <a href="../../index.html" class="flex items-center text-white hover:opacity-90 transition-smooth">
-                <i class="fa fa-reply" aria-hidden="true"></i>主页
+                <i class="fa fa-reply" aria-hidden="true"></i>Home
             </a>
         </div>
-        <!-- 菜单区域 -->
+        <!-- Menu Area -->
         <aside id="sidebar" class="bg-dark text-white w-0 p-4 shadow-md transition-all duration-300 ease-in-out overflow-hidden">
             <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-700">
-                导航菜单
+                Navigation Menu
             </h2>
-            <!-- 导航菜单列表 -->
+            <!-- Navigation Menu List -->
             <nav class="space-y-1">
                 <button onclick="showContent('home')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
-                    <i class="fa fa-home w-6"></i>首页
+                    <i class="fa fa-home w-6"></i>Home
                 </button>
                 <button onclick="showContent('another_games-games')" class="menu-btn w-full text-left px-4 py-3 rounded hover:bg-primary transition-smooth flex items-center">
                     <i class="fa fa-gamepad w-6"></i>Another Game
@@ -126,19 +126,19 @@
             </nav>
         </aside>
 
-        <!-- 内容区域 -->
+        <!-- Content Area -->
         <section class="flex-grow p-6 overflow-auto">
-            <!-- 首页内容 -->
+            <!-- Home Content -->
             <div id="home" class="content-section">
                 <div class="bg-white rounded-lg shadow-md p-6 mb-6">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4">
-                        欢迎来到Another Game导航
+                        Welcome to Another Game Navigation
                     </h2>
                     <p class="text-gray-600 mb-4">
-                        这里有很多游戏可以浏览!
+                        There are many games to browse here!
                     </p>
                     <p class="text-gray-600">
-                        请使用左侧菜单浏览游戏作品和相关平台。
+                        Please use the menu on the left to browse game works and related platforms.
                     </p>
                 </div>
         
@@ -148,42 +148,42 @@
                         <i class="fa fa-gamepad text-5xl text-primary mb-4">
                         </i>
                         <h3 class="text-xl font-semibold mb-2">
-                            精彩游戏
+                            Amazing Games
                         </h3>
                         <p class="text-gray-600">
-                            探索热门游戏作品
+                            Explore popular game works
                         </p>
                         <button onclick="showContent('another_games-games')" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition-smooth">
-                            查看游戏
+                            View Games
                         </button>
                     </div>
 
                 </div>
             </div>
 
-            <!-- 其他游戏内容 -->
+            <!-- Other Games Content -->
             <div id="another_games-games" class="content-section hidden">
                 <div class="bg-white rounded-lg shadow-md p-6 mb-6">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4">
                         <i class="fa fa-gamepad mr-2 text-primary">
-                        </i>Microsoft官网
+                        </i>Microsoft Official Website
                     </h2>
-                    <a href="https://www.microsoft.com" target="_blank" title="Microsoft官网" class="inline-block mb-8 p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-smooth">
-                        <img src="another_games/images/logo/Microsoft.png" alt="Microsoft 官网" class="h-16 md:h-20 lg:h-24 w-auto object-cover bg-black p-2">
+                    <a href="https://www.microsoft.com" target="_blank" title="Microsoft Official Website" class="inline-block mb-8 p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition-smooth">
+                        <img src="another_games/images/logo/Microsoft.png" alt="Microsoft Official Website" class="h-16 md:h-20 lg:h-24 w-auto object-cover bg-black p-2">
                     </a>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Minecraft -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth">
-                        <a href="https://www.minecraft.net" target="_blank" title="Minecraft官网">
+                        <a href="https://www.minecraft.net" target="_blank" title="Minecraft Official Website">
                             <img src="another_games/images/game_logo/Minecraft.svg" alt="Minecraft" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-xl font-semibold text-gray-800">
                                     Minecraft
                                 </h3>
                                 <p class="text-gray-600 text-sm mt-1">
-                                    沙盒建造游戏
+                                    Sandbox Building Game
                                 </p>
                             </div>
                         </a>
@@ -194,13 +194,13 @@
         </section>
     </main>
 
-    <!-- 页脚区域 -->
+    <!-- Footer Area -->
     <footer class="bg-dark text-white py-6">
         <div class="container mx-auto px-4 text-center">
-            <p>© 2025 Another Game 游戏导航 | 本网站仅作展示用途
+            <p>© 2025 Another Game Navigation | This website is for display purposes only
             </p>
             <p class="text-sm mt-2 opacity-70">
-                所有商标和版权均属于各自所有者
+                All trademarks and copyrights belong to their respective owners
             </p>
         </div>
     </footer>
