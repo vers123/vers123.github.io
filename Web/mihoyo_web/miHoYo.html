@@ -139,6 +139,7 @@
         border-radius: 8px;
         outline: none;
         transition: all 0.3s ease;
+        color: #333;
     }
 
     .search-input:focus {
@@ -709,8 +710,10 @@
             themeToggle.addEventListener('click', toggleTheme);
 
             // 初始化语言切换
-            const langToggle = document.getElementById('langToggle');
-            langToggle.addEventListener('click', toggleLanguage);
+            const langToggles = document.querySelectorAll('.lang-toggle-btn');
+            langToggles.forEach(btn => {
+                btn.addEventListener('click', toggleLanguage);
+            });
 
             // 更新搜索框占位符
             updateSearchPlaceholder();
@@ -737,17 +740,28 @@
             const zhElements = document.querySelectorAll('.lang-zh');
             const enElements = document.querySelectorAll('.lang-en');
             
-            zhElements.forEach(el => {
-                el.style.display = el.style.display === 'none' ? 'inline' : 'none';
-            });
+            // 检查当前语言状态（默认中文）
+            const isCurrentlyChinese = zhElements[0].style.display !== 'none';
             
-            enElements.forEach(el => {
-                el.style.display = el.style.display === 'none' ? 'inline' : 'none';
-            });
-            
-            // 保存语言偏好
-            const isEnglish = enElements[0].style.display === 'inline';
-            localStorage.setItem('preferredLang', isEnglish ? 'en' : 'zh');
+            if (isCurrentlyChinese) {
+                // 切换到英文
+                zhElements.forEach(el => {
+                    el.style.display = 'none';
+                });
+                enElements.forEach(el => {
+                    el.style.display = 'inline';
+                });
+                localStorage.setItem('preferredLang', 'en');
+            } else {
+                // 切换到中文
+                zhElements.forEach(el => {
+                    el.style.display = 'inline';
+                });
+                enElements.forEach(el => {
+                    el.style.display = 'none';
+                });
+                localStorage.setItem('preferredLang', 'zh');
+            }
             
             // 更新搜索框占位符
             updateSearchPlaceholder();

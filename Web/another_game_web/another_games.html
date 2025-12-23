@@ -143,6 +143,7 @@
         border-radius: 8px;
         outline: none;
         transition: all 0.3s ease;
+        color: #333;
     }
 
     .search-input:focus {
@@ -368,241 +369,21 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" id="gamesGrid">
-                    <!-- 塞尔达传说 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="塞尔达传说" data-url="https://www.zelda.com/">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '塞尔达传说', 'https://www.zelda.com/')">
+                     <!-- Minecraft -->
+                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="Minecraft" data-url="https://www.minecraft.net/">
+                        <button class="favorite-btn" onclick="toggleFavorite(this, 'Minecraft', 'https://www.minecraft.net/')">
                             <i class="fa fa-heart-o"></i>
                         </button>
-                        <a href="https://www.zelda.com/" target="_blank" title="塞尔达传说官网">
-                            <img src="images/zelda.jpg" alt="塞尔达传说" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
+                        <a href="https://www.minecraft.net/" target="_blank" title="Minecraft 官网">
+                            <img src="another_games/images/game_logo/Minecraft.svg" alt="Minecraft" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
                             <div class="p-4">
                                 <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">塞尔达传说官网</span>
-                                    <span class="lang-en">The Legend of Zelda Official Website</span>
+                                    <span class="lang-zh">Minecraft 官网</span>
+                                    <span class="lang-en">Minecraft Official Website</span>
                                 </h3>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">任天堂经典动作冒险游戏</span>
-                                    <span class="lang-en">Nintendo classic action-adventure game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 反恐精英2 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="反恐精英2" data-url="https://blog.counter-strike.net/">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '反恐精英2', 'https://blog.counter-strike.net/')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://blog.counter-strike.net/" target="_blank" title="反恐精英2官网">
-                            <img src="images/cs2.jpg" alt="反恐精英2" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">反恐精英2官网</span>
-                                    <span class="lang-en">Counter-Strike 2 Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">经典第一人称射击游戏</span>
-                                    <span class="lang-en">Classic first-person shooter game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 无畏契约 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="无畏契约" data-url="https://playvalorant.com/">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '无畏契约', 'https://playvalorant.com/')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://playvalorant.com/" target="_blank" title="无畏契约官网">
-                            <img src="images/valorant.jpg" alt="无畏契约" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">无畏契约官网</span>
-                                    <span class="lang-en">VALORANT Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">战术射击游戏</span>
-                                    <span class="lang-en">Tactical shooter game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 英雄联盟 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="英雄联盟" data-url="https://www.leagueoflegends.com/">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '英雄联盟', 'https://www.leagueoflegends.com/')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://www.leagueoflegends.com/" target="_blank" title="英雄联盟官网">
-                            <img src="images/lol.jpg" alt="英雄联盟" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">英雄联盟官网</span>
-                                    <span class="lang-en">League of Legends Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">多人在线战术竞技游戏</span>
-                                    <span class="lang-en">Multiplayer online battle arena game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- DOTA 2 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="DOTA 2" data-url="https://www.dota2.com/">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, 'DOTA 2', 'https://www.dota2.com/')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://www.dota2.com/" target="_blank" title="DOTA 2官网">
-                            <img src="images/dota2.jpg" alt="DOTA 2" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">DOTA 2官网</span>
-                                    <span class="lang-en">DOTA 2 Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">多人在线战术竞技游戏</span>
-                                    <span class="lang-en">Multiplayer online battle arena game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 原神 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="原神" data-url="https://ys.mihoyo.com/main">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '原神', 'https://ys.mihoyo.com/main')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://ys.mihoyo.com/main" target="_blank" title="原神官网">
-                            <img src="images/genshin.jpg" alt="原神" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">原神官网</span>
-                                    <span class="lang-en">Genshin Impact Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">开放世界冒险游戏</span>
-                                    <span class="lang-en">Open-world adventure game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 崩坏：星穹铁道 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="崩坏：星穹铁道" data-url="https://sr.mihoyo.com/main">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '崩坏：星穹铁道', 'https://sr.mihoyo.com/main')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://sr.mihoyo.com/main" target="_blank" title="崩坏：星穹铁道官网">
-                            <img src="images/starrail.jpg" alt="崩坏：星穹铁道" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">崩坏：星穹铁道官网</span>
-                                    <span class="lang-en">Honkai: Star Rail Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">回合制角色扮演游戏</span>
-                                    <span class="lang-en">Turn-based role-playing game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 绝区零 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="绝区零" data-url="https://zzz.mihoyo.com/main">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '绝区零', 'https://zzz.mihoyo.com/main')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://zzz.mihoyo.com/main" target="_blank" title="绝区零官网">
-                            <img src="images/zzz.jpg" alt="绝区零" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">绝区零官网</span>
-                                    <span class="lang-en">Zenless Zone Zero Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">动作角色扮演游戏</span>
-                                    <span class="lang-en">Action role-playing game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 王者荣耀 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="王者荣耀" data-url="https://pvp.qq.com/">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '王者荣耀', 'https://pvp.qq.com/')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://pvp.qq.com/" target="_blank" title="王者荣耀官网">
-                            <img src="images/wzry.jpg" alt="王者荣耀" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">王者荣耀官网</span>
-                                    <span class="lang-en">Arena of Valor Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">多人在线战术竞技游戏</span>
-                                    <span class="lang-en">Multiplayer online battle arena game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 第五人格 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="第五人格" data-url="https://id5.163.com/">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '第五人格', 'https://id5.163.com/')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://id5.163.com/" target="_blank" title="第五人格官网">
-                            <img src="images/idv.jpg" alt="第五人格" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">第五人格官网</span>
-                                    <span class="lang-en">Identity V Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">非对称对抗竞技游戏</span>
-                                    <span class="lang-en">Asymmetric competitive game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 明日方舟 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="明日方舟" data-url="https://ak.hypergryph.com/">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '明日方舟', 'https://ak.hypergryph.com/')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://ak.hypergryph.com/" target="_blank" title="明日方舟官网">
-                            <img src="images/arknights.jpg" alt="明日方舟" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">明日方舟官网</span>
-                                    <span class="lang-en">Arknights Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">策略塔防游戏</span>
-                                    <span class="lang-en">Strategy tower defense game</span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- 原神 -->
-                    <div class="game-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-smooth relative" data-game="原神" data-url="https://ys.mihoyo.com/main">
-                        <button class="favorite-btn" onclick="toggleFavorite(this, '原神', 'https://ys.mihoyo.com/main')">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <a href="https://ys.mihoyo.com/main" target="_blank" title="原神官网">
-                            <img src="images/genshin.jpg" alt="原神" class="h-20 md:h-24 lg:h-32 w-auto object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                    <span class="lang-zh">原神官网</span>
-                                    <span class="lang-en">Genshin Impact Official Website</span>
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                    <span class="lang-zh">开放世界冒险游戏</span>
-                                    <span class="lang-en">Open-world adventure game</span>
+                                    <span class="lang-zh">沙盒游戏</span>
+                                    <span class="lang-en">Sandbox game</span>
                                 </p>
                             </div>
                         </a>
@@ -670,8 +451,10 @@
             themeToggle.addEventListener('click', toggleTheme);
 
             // 初始化语言切换
-            const langToggle = document.getElementById('langToggle');
-            langToggle.addEventListener('click', toggleLanguage);
+            const langToggles = document.querySelectorAll('.lang-toggle-btn');
+            langToggles.forEach(btn => {
+                btn.addEventListener('click', toggleLanguage);
+            });
 
             // 更新搜索框占位符
             updateSearchPlaceholder();
@@ -698,17 +481,28 @@
             const zhElements = document.querySelectorAll('.lang-zh');
             const enElements = document.querySelectorAll('.lang-en');
             
-            zhElements.forEach(el => {
-                el.style.display = el.style.display === 'none' ? 'inline' : 'none';
-            });
+            // 检查当前语言状态（默认中文）
+            const isCurrentlyChinese = zhElements[0].style.display !== 'none';
             
-            enElements.forEach(el => {
-                el.style.display = el.style.display === 'none' ? 'inline' : 'none';
-            });
-            
-            // 保存语言偏好
-            const isEnglish = enElements[0].style.display === 'inline';
-            localStorage.setItem('preferredLang', isEnglish ? 'en' : 'zh');
+            if (isCurrentlyChinese) {
+                // 切换到英文
+                zhElements.forEach(el => {
+                    el.style.display = 'none';
+                });
+                enElements.forEach(el => {
+                    el.style.display = 'inline';
+                });
+                localStorage.setItem('preferredLang', 'en');
+            } else {
+                // 切换到中文
+                zhElements.forEach(el => {
+                    el.style.display = 'inline';
+                });
+                enElements.forEach(el => {
+                    el.style.display = 'none';
+                });
+                localStorage.setItem('preferredLang', 'zh');
+            }
             
             // 更新搜索框占位符
             updateSearchPlaceholder();
