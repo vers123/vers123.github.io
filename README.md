@@ -143,6 +143,12 @@ The website has been optimized for search engines:
 
 ## 更新日志 / Changelog
 
+### V2.4 (2025-12-23)
+- Fixed search box style issue (white text on white background)
+- Fixed content duplication issue (overlapping Chinese/English elements)
+- Improved language switching functionality (implemented full English/Chinese toggle logic)
+- Updated language toggle to switch between complete language modes
+
 ### V2.3 (2025-12-23)
 - Added user favorites feature with local storage persistence
 - Added search functionality for game name filtering
@@ -340,6 +346,12 @@ A：是的，网站已针对各种设备进行了优化。
 ---
 
 ## 更新日志
+
+### V2.4 (2025-12-23)
+- 修复了搜索框样式问题（白色背景上的白色文字）
+- 修复了内容重复问题（中英文元素重叠显示）
+- 改进了语言切换功能（实现了全英文/全中文切换逻辑）
+- 更新了语言切换按钮，支持完整语言模式切换
 
 ### V2.3 (2025-12-23)
 - 添加了用户收藏功能，支持本地存储持久化
