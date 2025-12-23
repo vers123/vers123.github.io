@@ -154,6 +154,11 @@ A: Yes, the website has been optimized for various devices.
 
 ## 更新日志 / Changelog
 
+### V2.2 (2025-12-23)
+- Integrated README_EN.md and README_CN.md into README.md
+- Deleted redundant language-specific README files
+- Unified documentation structure for better maintainability
+
 ### V2.1 (2025-12-23)
 - Added English versions of all pages
 - Created English version of README.md
@@ -343,6 +348,11 @@ A：是的，网站已针对各种设备进行了优化。
 ---
 
 ## 更新日志
+
+### V2.2 (2025-12-23)
+- 整合README_EN.md和README_CN.md到README.md
+- 删除了冗余的语言特定README文件
+- 统一了文档结构以提高可维护性
 
 ### V2.1 (2025-12-23)
 - 添加了所有页面的英文版本
