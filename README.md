@@ -223,14 +223,19 @@ vers123.github.io/
 
 ### Another Game 导航
 
+> **注意**：其他热门游戏导航页正在开发中，目前暂时使用原神作为示例展示。后续将陆续添加英雄联盟、无畏契约、Apex 英雄、堡垒之夜、我的世界、守望先锋2 等热门游戏的官方导航链接。
+
 | 游戏名称 | 类型 | 官网链接 |
 |---------|------|---------|
-| 英雄联盟 | MOBA | [官网](https://lol.qq.com) |
-| 无畏契约 | 战术射击 | [官网](https://valorant.qq.com) |
-| Apex 英雄 | 大逃杀 | [官网](https://www.ea.com/zh-cn/games/apex-legends) |
-| 堡垒之夜 | 大逃杀 | [官网](https://www.epicgames.com/fortnite) |
-| 我的世界 | 沙盒建造 | [官网](https://www.minecraft.net) |
-| 守望先锋2 | 团队射击 | [官网](https://overwatch.blizzard.com) |
+| 原神 | 开放世界冒险 | [官网](https://ys.mihoyo.com/main) |
+
+**即将添加的游戏：**
+- 英雄联盟 (MOBA)
+- 无畏契约 (战术射击)
+- Apex 英雄 (大逃杀)
+- 堡垒之夜 (大逃杀)
+- 我的世界 (沙盒建造)
+- 守望先锋2 (团队射击)
 
 ## 开发指南
 
